@@ -1,0 +1,13 @@
+Customer ID,Name,Email,Plan,Seats,Signup Date,Monthly Spend,Country,Active
+101,Anita Rao,anita@example.com,Starter,3,2026-01-12,29,India,yes
+102,Bruno Silva,bruno@example.com,Team,12,2026-02-03,79,Brazil,yes
+103,Chloe Martin,chloe@example.com,Starter,2,2026-02-18,29,France,no
+104,Dinesh Kumar,dinesh@example.com,Growth,24,2026-03-01,99,India,yes
+105,Elena Petrova,elena@example.com,Team,8,2026-03-14,79,Germany,yes
+106,Farid Hassan,farid@example.com,Starter,4,2026-04-02,29,UAE,no
+107,Grace Kim,grace@example.com,Growth,26,2026-04-21,99,South Korea,yes
+108,Hiro Tanaka,hiro@example.com,Team,10,2026-05-09,79,Japan,yes
+109,Isha Patel,isha@example.com,Starter,5,2026-05-27,29,India,no
+110,Jakub Nowak,jakub@example.com,Growth,18,2026-06-11,99,Poland,yes
+111,Lena Fischer,lena@example.com,Team,6,2026-06-30,79,Germany,yes
+112,Mateo Rossi,mateo@example.com,Starter,1,2026-07-15,29,Italy,no

@@ -1,0 +1,20 @@
+﻿Order ID,Date,Customer,Amount,Region,Status,Channel,Amount,Notes,Discount
+1,2026-11-01,"Acme, Inc.",1200,North,paid,online,1200,"Bulk order",
+2,08/11/2026,Beta Ltd,1450,South,paid,online,1450,,
+3,09/11/2026,Gamma,980.50,East,paid,online,980.50,"Rush delivery",
+4,"Nov 10, 2026",Delta Co,15000,West,paid,online,15000,"One large order",
+5,2026-11-10,Epsilon,N/A,North,paid,online,1200,"Amount missing",
+6,11/11/2026,Zeta,875,South,pending,online,875,,
+7,11/11/2026,Eta,920,East,paid,online,920,,
+007,2026-11-11,Theta,1100,West,paid,online,1100,"Customer id has leading zeros",
+7,11/11/2026,Eta,920,East,paid,online,920,,
+9,2026-11-12," Acme, Inc. ",1300,North,paid,online,1300,"Name has stray spaces",
+10,2026-11-12,Iota,760,South
+11,2026-11-13,Kappa,"$2,400",East,paid,online,2400,"Currency formatting",
+12,13/11/2026,Lambda,810,West,cancelled,online,810,,
+13,2026-11-14,Mu,760,South,paid,online,760,,
+14,2026-11-14,Nu,990,East,paid,online,990,,
+
+15,,Omicron,1050,North,paid,online,1050,"Date missing",
+16,2026-11-15,Pi,1200,West,paid,online,1200,"Note spans
+two lines",
