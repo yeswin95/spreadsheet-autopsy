@@ -199,26 +199,51 @@ build from the edge with no cold start.
 
 ---
 
-## 12. What the AI did not do
+## 12. The first UI was accurate but not readable
+
+**What the AI produced.** A working report that read like machine output:
+`"," separated`, `1 row(s) had the wrong number of fields and were padded`,
+`2 outlier(s) sit outside…`. It also drew a histogram for `Order ID` (a flat wall
+of twelve bars), and one bar per row for `Name` and `Email`, because every value
+was unique.
+
+**Why it is wrong.** Accuracy is not the same as a readable report. The chart for
+an identifier column says nothing, and one-bar-per-row charts are noise dressed
+as analysis. Twenty findings also pushed the data preview 1,600px down the page.
+
+**Fixed after screenshotting the rendered report** at 1440px wide:
+
+- delimiter written as a word (`comma separated`);
+- singular/plural agreed properly everywhere;
+- distributions hidden for identifier columns, with a line saying why;
+- category charts only when a column repeats values;
+- low-severity findings collapsed behind a toggle, so the twelve findings that
+  matter come first.
+
+**Proof.** `docs/screenshot.png`, `src/components/ColumnCard.tsx`.
+
+---
+
+## 13. What the AI did not do
 
 - It did not choose the fixtures. I wrote `messy-sales.csv` by hand so that each
   check has at least one row proving it — the duplicate header, the `007`
   identifier, the `N/A` in `Amount`, the ragged row, the quoted newline.
 - It did not pick the score weights; 8/4/1.5 is a deliberate ratio, not a
   generated number.
-- It did not verify the install. That was done by cloning the repository fresh
-  and running the README commands verbatim (see below).
+- It did not verify the install. That was done against a clean copy of the
+  repository with no `node_modules` and no `dist` (see below).
 
 ## Verification
 
 ```bash
-# from a clean clone, following the README exactly
+# clean copy of the repo — no node_modules, no dist — then the README commands
 npm ci
 npm test
 npm run build
 ```
 
-- Tests: **41 passed** (4 files).
+- Tests: **41 passed** (4 files), including both bundled fixtures.
 - Build: type-check clean, `dist/` produced, ~56 kB gzipped JS.
 - Manual checks: both fixtures, a file with a quoted newline, a semicolon file,
   an empty file, a file with a header only, and a refresh (report clears).
